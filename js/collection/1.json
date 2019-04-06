@@ -1,0 +1,59 @@
+{
+  "id": "1",
+  "hash": "0xd1Df4eFc6b7d47D00E21566B668a9cbbBf5D2XXX",
+  "owner": {
+    "address": "0xed9bab7b1690c08e213a35b318de14420fb57d8c",
+    "type": "account",
+    "since": "1539288088"
+  },
+  "totalOwners": 13,
+  "listing": {
+    "isListed": 1
+  },
+  "details": {
+    "@context": "http://schema.org",
+    "@type": "Painting",
+    "name": "Lucky Charms",
+    "dateCreated": "+1994",
+    "material": "Acrylic and Lacquer",
+    "creator": {
+      "@type": "Person",
+      "name": "Sky Jones"
+    },
+    "contentLocation": {
+      "@type": "AdministrativeArea",
+      "name": "North Texas"
+    },
+    "width": [
+      {
+        "@type": "Distance",
+        "name": "20 inches"
+      }
+    ],
+    "height": [
+      {
+        "@type": "Distance",
+        "name": "30 inches"
+      }
+    ],
+    "edition": 1,
+    "sizeOfEditon": 1,
+    "signedByArtist": 0,
+    "citation": [
+      {
+        "@type": "DigitalDocument",
+        "name": "Front Side Image",
+        "contentLocation": "https://fourparkmanagement.app.box.com/file/315052584472",
+        "sha3-224-hash": "c3de0991be048436c1ac565857ce85ac53b615272d0cddbfd3385438",
+        "filename": "200-093_Lucky Charms_Front.jpg"
+      },
+      {
+        "@type": "DigitalDocument",
+        "name": "Back Side Image",
+        "contentLocation": "https://fourparkmanagement.app.box.com/file/315057636926",
+        "sha3-224-hash": "a9e12dbfe565be4b8a4adc8bc81cbb328928dadf504ec8f2813d11be",
+        "filename": "200-093_Lucky Charms_Back.jpg"
+      }
+    ]
+  }
+}

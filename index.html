@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <p>Total Tokens:
+    <ul>
+      <li>Cody: <span id="0x7FD6485acA6Ec6dE91946B997770dd31026f0662"></span> --- 0x7FD6485acA6Ec6dE91946B997770dd31026f0662</li>
+      <li>Patrik: <span id="0x150d93630dE6d7ee603194C2A26eecb2020F5023"></span> --- 0x150d93630dE6d7ee603194C2A26eecb2020F5023</li>
+      <li>Lotta: <span id="0x732d0C2309486701bEE258B3df517BEb1504e168"></span> --- 0x732d0C2309486701bEE258B3df517BEb1504e168</li>
+    </ul>
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Token #</th>
+        <th>Enbled</th>
+        <th>Secured</th>
+        <th>Mint</th>
+        <th>Transfer</th>
+        <th>Transfer</th>
+        <th>Enable</th>
+        <th>Disable</th>
+        <th>Secure</th>
+        <th>Unsecure</th>
+        <th>Owner</th>
+        <th>Burn</th>
+        <th>JSON</th>
+      </tr>
+    </thead>
+    <tr id="t0">
+      <td>Token 0</td>
+      <td class="able"></td>
+      <td class="secure"></td>
+      <td><button onClick="mint(0,0)">Mint</button></td>
+      <td><button onClick="send(0,1)">Send to Patrik</button></td>
+      <td><button onClick="send(0,2)">Send to Lotta</button></td>
+      <td><button onClick="enable(0)">✅</button></td>
+      <td><button onClick="disable(0)">❌</button></td>
+      <td><button onClick="secure(0)">🔒</button></td>
+      <td><button onClick="unsecure(0)">🔓</button></td>
+      <td>Owner: <span class="owner"></span></td>
+      <td><button onClick="burn(0)">Burn</button></td>
+      <td class="json"><a href="#">Link</a></td>
+    </tr>
+    <tr id="t1">
+      <td>Token 1</td>
+      <td class="able"></td>
+      <td class="secure"></td>
+      <td><button onClick="mint(0,1)">Mint</button></td>
+      <td><button onClick="send(1,1)">Send to Patrik</button></td>
+      <td><button onClick="send(1,2)">Send to Lotta</button></td>
+      <td><button onClick="enable(1)">✅</button></td>
+      <td><button onClick="disable(1)">❌</button></td>
+      <td><button onClick="secure(1)">🔒</button></td>
+      <td><button onClick="unsecure(1)">🔓</button></td>
+      <td>Owner: <span class="owner"></span></td>
+      <td><button onClick="burn(1)">Burn</button></td>
+      <td class="json"><a href="#">Link</a></td>
+    </tr>
+    <tr id="t2">
+      <td>Token 2</td>
+      <td class="able"></td>
+      <td class="secure"></td>
+      <td><button onClick="mint(0,2)">Mint</button></td>
+      <td><button onClick="send(2,1)">Send to Patrik</button></td>
+      <td><button onClick="send(2,2)">Send to Lotta</button></td>
+      <td><button onClick="enable(2)">✅</button></td>
+      <td><button onClick="disable(2)">❌</button></td>
+      <td><button onClick="secure(2)">🔒</button></td>
+      <td><button onClick="unsecure(2)">🔓</button></td>
+      <td>Owner: <span class="owner"></span></td>
+      <td><button onClick="burn(2)">Burn</button></td>
+      <td class="json"><a href="#">Link</a></td>
+    </tr>
+  </table>
+
+  <button onClick="paint()">Refresh</button>
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
