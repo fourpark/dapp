@@ -46,16 +46,19 @@ function getBalance(who) {
 
 function getStates(which) {
   fp.getSecuredState(which, (e,r) => {
+    if (e) { console.log(e) }
     let x = r.toString() == '1' ? '✅' : r.toString() == '0' ? '❌' : '-';
     $('#t' + which + ' .secure').text(x)
   });
  
   fp.getAbleState(which, (e,r) => {
+    if (e) { console.log(e) }
     let x = r.toString() == '1' ? '✅' : r.toString() == '0' ? '❌' : '-';
     $('#t' + which + ' .able').text(x)
   });
 
   fp.getAudit(which, (e,r) => {
+    if (e) { console.log(e) }
     $('#t' + which + ' .audit').text(r.toString());
   })
 
@@ -109,7 +112,7 @@ function mint (who, which) {
 }
 
 function send (which, to) {
-  fp.transferFrom(wallets[0], wallets[to], which, (e,r) => {
+  fp.transferFrom(web3.eth.defaultAccount, wallets[to], which, (e,r) => {
     console.log('📩')
   });
 }
