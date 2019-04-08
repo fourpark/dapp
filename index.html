@@ -19,16 +19,30 @@
 <body>
   <div class="container-fluid">
 
-    <p>Total Tokens:
-      <ul>
-        <li>Cody: <span id="0x7FD6485acA6Ec6dE91946B997770dd31026f0662"></span> --- 0x7FD6485acA6Ec6dE91946B997770dd31026f0662</li>
-        <li>Patrik: <span id="0x150d93630dE6d7ee603194C2A26eecb2020F5023"></span> --- 0x150d93630dE6d7ee603194C2A26eecb2020F5023</li>
-        <li>Lotta: <span id="0x732d0C2309486701bEE258B3df517BEb1504e168"></span> --- 0x732d0C2309486701bEE258B3df517BEb1504e168</li>
-      </ul>
-    </p>
-
-    <p><strong>Auditor</strong>: <span id="auditor"></span></p>
-    <p><strong>Locator</strong>: <span id="locator"></span></p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Total Tokens</th>
+          <th>Public Key/Address</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>Cody</td>
+        <td id="0x7FD6485acA6Ec6dE91946B997770dd31026f0662"></td>
+        <td>0x7FD6485acA6Ec6dE91946B997770dd31026f0662</td>
+      </tr>
+      <tr>
+        <td>Patrik</td>
+        <td id="0x150d93630dE6d7ee603194C2A26eecb2020F5023"></td>
+        <td>0x150d93630dE6d7ee603194C2A26eecb2020F5023</td>
+      </tr>
+      <tr>
+        <td>Lotta</td>
+        <td id="0x732d0C2309486701bEE258B3df517BEb1504e168"></td>
+        <td>0x732d0C2309486701bEE258B3df517BEb1504e168</td>
+      </tr>
+    </table>
 
     <table class="table">
       <thead>
@@ -47,7 +61,7 @@
         <td>Token 0</td>
         <td class="able"></td>
         <td class="secure"></td>
-        <td>Owner: <span class="owner"></span></td>
+        <td class="owner"></td>
         <td class="json"><a href="#">Link</a></td>
         <td class="audit"></td>
         <td class="location"></td>
@@ -82,7 +96,7 @@
         <td>Token 1</td>
         <td class="able"></td>
         <td class="secure"></td>
-        <td>Owner: <span class="owner"></span></td>
+        <td class="owner"></td>
         <td class="json"><a href="#">Link</a></td>
         <td class="audit"></td>
         <td class="location"></td>
@@ -117,7 +131,7 @@
         <td>Token 2</td>
         <td class="able"></td>
         <td class="secure"></td>
-        <td>Owner: <span class="owner"></span></td>
+        <td class="owner"></td>
         <td class="json"><a href="#">Link</a></td>
         <td class="audit"></td>
         <td class="location"></td>
@@ -150,7 +164,10 @@
       </tr>
     </table>
 
-    <button onClick="paint()">Refresh</button>
+    <button class="btn btn-primary" onClick="paint()">Refresh</button>
+    <hr>
+    <p><strong>Auditor</strong>: <span id="auditor"></span></p>
+    <p><strong>Locator</strong>: <span id="locator"></span></p>
   </div>
 
   <script src="js/plugins.js"></script>
