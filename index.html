@@ -1,103 +1,163 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="">
 
 <head>
   <meta charset="utf-8">
   <title></title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <p>Total Tokens:
-    <ul>
-      <li>Cody: <span id="0x7FD6485acA6Ec6dE91946B997770dd31026f0662"></span> --- 0x7FD6485acA6Ec6dE91946B997770dd31026f0662</li>
-      <li>Patrik: <span id="0x150d93630dE6d7ee603194C2A26eecb2020F5023"></span> --- 0x150d93630dE6d7ee603194C2A26eecb2020F5023</li>
-      <li>Lotta: <span id="0x732d0C2309486701bEE258B3df517BEb1504e168"></span> --- 0x732d0C2309486701bEE258B3df517BEb1504e168</li>
-    </ul>
-  </p>
+  <div class="container-fluid">
 
-  <table>
-    <thead>
-      <tr>
-        <th>Token #</th>
-        <th>Enbled</th>
-        <th>Secured</th>
-        <th>Mint</th>
-        <th>Transfer</th>
-        <th>Transfer</th>
-        <th>Enable</th>
-        <th>Disable</th>
-        <th>Secure</th>
-        <th>Unsecure</th>
-        <th>Owner</th>
-        <th>Burn</th>
-        <th>JSON</th>
+    <p>Total Tokens:
+      <ul>
+        <li>Cody: <span id="0x7FD6485acA6Ec6dE91946B997770dd31026f0662"></span> --- 0x7FD6485acA6Ec6dE91946B997770dd31026f0662</li>
+        <li>Patrik: <span id="0x150d93630dE6d7ee603194C2A26eecb2020F5023"></span> --- 0x150d93630dE6d7ee603194C2A26eecb2020F5023</li>
+        <li>Lotta: <span id="0x732d0C2309486701bEE258B3df517BEb1504e168"></span> --- 0x732d0C2309486701bEE258B3df517BEb1504e168</li>
+      </ul>
+    </p>
+
+    <p><strong>Auditor</strong>: <span id="auditor"></span></p>
+    <p><strong>Locator</strong>: <span id="locator"></span></p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Token #</th>
+          <th>Enbled</th>
+          <th>Secured</th>
+          <th>Owner</th>
+          <th>JSON</th>
+          <th>Audit</th>
+          <th>Location</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tr id="t0">
+        <td>Token 0</td>
+        <td class="able"></td>
+        <td class="secure"></td>
+        <td>Owner: <span class="owner"></span></td>
+        <td class="json"><a href="#">Link</a></td>
+        <td class="audit"></td>
+        <td class="location"></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <h6 class="dropdown-header">Existence</h6>
+              <a class="dropdown-item" href="#" onClick="mint(0,0)">Mint</a>
+              <a class="dropdown-item" href="#" onClick="burn(0)">Burn</a>
+              <h6 class="dropdown-header">Transfer</h6>
+              <a class="dropdown-item" href="#" onClick="send(0,1)">Send to Patrik</a>
+              <a class="dropdown-item" href="#" onClick="send(0,2)">Send to Lotta</a>
+              <h6 class="dropdown-header">Ability</h6>
+              <a class="dropdown-item" href="#" onClick="enable(0)">Enable</a>
+              <a class="dropdown-item" href="#" onClick="disable(0)">Disable</a>
+              <h6 class="dropdown-header">Security</h6>
+              <a class="dropdown-item" href="#" onClick="secure(0)">Secure</a>
+              <a class="dropdown-item" href="#" onClick="unsecure(0)">Unsecure</a>
+              <h6 class="dropdown-header">Audit</h6>
+              <a class="dropdown-item" href="#" onClick="audit(0)">Audit</a>
+              <h6 class="dropdown-header">Location</h6>
+              <a class="dropdown-item" href="#" onClick="setLocation(0,'32.7767','96.7970')">Set Dallas</a>
+              <a class="dropdown-item" href="#" onClick="setLocation(0,'40.7128','74.0060')">Set New York</a>
+            </div>
+          </div>
+        </td>
       </tr>
-    </thead>
-    <tr id="t0">
-      <td>Token 0</td>
-      <td class="able"></td>
-      <td class="secure"></td>
-      <td><button onClick="mint(0,0)">Mint</button></td>
-      <td><button onClick="send(0,1)">Send to Patrik</button></td>
-      <td><button onClick="send(0,2)">Send to Lotta</button></td>
-      <td><button onClick="enable(0)">✅</button></td>
-      <td><button onClick="disable(0)">❌</button></td>
-      <td><button onClick="secure(0)">🔒</button></td>
-      <td><button onClick="unsecure(0)">🔓</button></td>
-      <td>Owner: <span class="owner"></span></td>
-      <td><button onClick="burn(0)">Burn</button></td>
-      <td class="json"><a href="#">Link</a></td>
-    </tr>
-    <tr id="t1">
-      <td>Token 1</td>
-      <td class="able"></td>
-      <td class="secure"></td>
-      <td><button onClick="mint(0,1)">Mint</button></td>
-      <td><button onClick="send(1,1)">Send to Patrik</button></td>
-      <td><button onClick="send(1,2)">Send to Lotta</button></td>
-      <td><button onClick="enable(1)">✅</button></td>
-      <td><button onClick="disable(1)">❌</button></td>
-      <td><button onClick="secure(1)">🔒</button></td>
-      <td><button onClick="unsecure(1)">🔓</button></td>
-      <td>Owner: <span class="owner"></span></td>
-      <td><button onClick="burn(1)">Burn</button></td>
-      <td class="json"><a href="#">Link</a></td>
-    </tr>
-    <tr id="t2">
-      <td>Token 2</td>
-      <td class="able"></td>
-      <td class="secure"></td>
-      <td><button onClick="mint(0,2)">Mint</button></td>
-      <td><button onClick="send(2,1)">Send to Patrik</button></td>
-      <td><button onClick="send(2,2)">Send to Lotta</button></td>
-      <td><button onClick="enable(2)">✅</button></td>
-      <td><button onClick="disable(2)">❌</button></td>
-      <td><button onClick="secure(2)">🔒</button></td>
-      <td><button onClick="unsecure(2)">🔓</button></td>
-      <td>Owner: <span class="owner"></span></td>
-      <td><button onClick="burn(2)">Burn</button></td>
-      <td class="json"><a href="#">Link</a></td>
-    </tr>
-  </table>
+      <tr id="t1">
+        <td>Token 1</td>
+        <td class="able"></td>
+        <td class="secure"></td>
+        <td>Owner: <span class="owner"></span></td>
+        <td class="json"><a href="#">Link</a></td>
+        <td class="audit"></td>
+        <td class="location"></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <h6 class="dropdown-header">Existence</h6>
+              <a class="dropdown-item" href="#" onClick="mint(0,1)">Mint</a>
+              <a class="dropdown-item" href="#" onClick="burn(1)">Burn</a>
+              <h6 class="dropdown-header">Transfer</h6>
+              <a class="dropdown-item" href="#" onClick="send(1,1)">Send to Patrik</a>
+              <a class="dropdown-item" href="#" onClick="send(1,2)">Send to Lotta</a>
+              <h6 class="dropdown-header">Ability</h6>
+              <a class="dropdown-item" href="#" onClick="enable(1)">Enable</a>
+              <a class="dropdown-item" href="#" onClick="disable(1)">Disable</a>
+              <h6 class="dropdown-header">Security</h6>
+              <a class="dropdown-item" href="#" onClick="secure(1)">Secure</a>
+              <a class="dropdown-item" href="#" onClick="unsecure(1)">Unsecure</a>
+              <h6 class="dropdown-header">Audit</h6>
+              <a class="dropdown-item" href="#" onClick="audit(1)">Audit</a>
+              <h6 class="dropdown-header">Location</h6>
+              <a class="dropdown-item" href="#" onClick="setLocation(1,'32.7767','96.7970')">Set Dallas</a>
+              <a class="dropdown-item" href="#" onClick="setLocation(1,'40.7128','74.0060')">Set New York</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr id="t2">
+        <td>Token 2</td>
+        <td class="able"></td>
+        <td class="secure"></td>
+        <td>Owner: <span class="owner"></span></td>
+        <td class="json"><a href="#">Link</a></td>
+        <td class="audit"></td>
+        <td class="location"></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Actions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <h6 class="dropdown-header">Existence</h6>
+              <a class="dropdown-item" href="#" onClick="mint(0,2)">Mint</a>
+              <a class="dropdown-item" href="#" onClick="burn(2)">Burn</a>
+              <h6 class="dropdown-header">Transfer</h6>
+              <a class="dropdown-item" href="#" onClick="send(2,1)">Send to Patrik</a>
+              <a class="dropdown-item" href="#" onClick="send(2,2)">Send to Lotta</a>
+              <h6 class="dropdown-header">Ability</h6>
+              <a class="dropdown-item" href="#" onClick="enable(2)">Enable</a>
+              <a class="dropdown-item" href="#" onClick="disable(2)">Disable</a>
+              <h6 class="dropdown-header">Security</h6>
+              <a class="dropdown-item" href="#" onClick="secure(2)">Secure</a>
+              <a class="dropdown-item" href="#" onClick="unsecure(2)">Unsecure</a>
+              <h6 class="dropdown-header">Audit</h6>
+              <a class="dropdown-item" href="#" onClick="audit(2)">Audit</a>
+              <h6 class="dropdown-header">Location</h6>
+              <a class="dropdown-item" href="#" onClick="setLocation(2,'32.7767','96.7970')">Set Dallas</a>
+              <a class="dropdown-item" href="#" onClick="setLocation(2,'40.7128','74.0060')">Set New York</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-  <button onClick="paint()">Refresh</button>
+    <button onClick="paint()">Refresh</button>
+  </div>
 
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
