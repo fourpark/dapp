@@ -1,15 +1,4 @@
 {
-  "id": 0,
-  "hash": "0xd1Df4eFc6b7d47D00E21566B668a9cbbBf5D26D0",
-  "owner": {
-    "address": "0xb1690c08e213a35ed9bab7b318de14420fb57d8c",
-    "type": "account",
-    "since": "1539288088"
-  },
-  "totalOwners": 13,
-  "listing": {
-    "isListed": 1
-  },
   "details": {
     "@context": "http://schema.org",
     "@type": "Painting",
