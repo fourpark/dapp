@@ -50,6 +50,17 @@ function getBalance(who) {
   });
 }
 
+function modalSend() {
+  console.log('modal sending!');
+  var which = $("#sendWhich").val();
+  var who = $("#sendWho").val();
+  console.log(who, which);
+  send(who, which);
+  $('#sendModal').modal('hide');
+  $('#sendWho').val('');
+  $('#sendWhich').val(0);
+}
+
 function getStates(which) {
   fp.getSecuredState(which, (e,r) => {
     let x = r.toString() == '1' ? '✅' : r.toString() == '0' ? '❌' : '-';
@@ -132,8 +143,8 @@ function mint (who, which) {
   });
 }
 
-function send (which, to) {
-  fp.transferFrom(web3.eth.defaultAccount, wallets[to], which, (e,r) => {
+function send (who, which) {
+  fp.transferFrom(web3.eth.defaultAccount, who, which, (e,r) => {
     console.log('📩')
   });
 }

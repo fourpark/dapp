@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    td.hash {
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
 </head>
 
 <body>
@@ -94,6 +102,7 @@
           <thead>
             <tr>
               <th>Token #</th>
+              <th>Actions</th>
               <th>Enbled</th>
               <th>Secured</th>
               <th>Owner</th>
@@ -101,18 +110,10 @@
               <th>Hash</th>
               <th>Audit</th>
               <th>Location</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tr id="t0">
             <td>Token 0</td>
-            <td class="able"></td>
-            <td class="secure"></td>
-            <td class="owner"></td>
-            <td class="json"><a href="#">Link</a></td>
-            <td class="hash"></td>
-            <td class="audit"></td>
-            <td class="location"></td>
             <td>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -123,11 +124,7 @@
                   <a class="dropdown-item" href="#" onClick="mint(0,0)">Mint</a>
                   <a class="dropdown-item" href="#" onClick="burn(0)">Burn</a>
                   <h6 class="dropdown-header">Transfer</h6>
-                  <a class="dropdown-item" href="#" onClick="send(0,0)">Send to Cody Master</a>
-                  <a class="dropdown-item" href="#" onClick="send(0,1)">Send to Cody Sub 1</a>
-                  <a class="dropdown-item" href="#" onClick="send(0,2)">Send to Cody Sub 2</a>
-                  <a class="dropdown-item" href="#" onClick="send(0,3)">Send to Patrik</a>
-                  <a class="dropdown-item" href="#" onClick="send(0,4)">Send to Lotta</a>
+                  <a class="dropdown-item" href="#" onClick="$('#sendModal').modal('show');">Send To...</a>
                   <h6 class="dropdown-header">Ability</h6>
                   <a class="dropdown-item" href="#" onClick="enable(0)">Enable</a>
                   <a class="dropdown-item" href="#" onClick="disable(0)">Disable</a>
@@ -144,9 +141,6 @@
                 </div>
               </div>
             </td>
-          </tr>
-          <tr id="t1">
-            <td>Token 1</td>
             <td class="able"></td>
             <td class="secure"></td>
             <td class="owner"></td>
@@ -154,6 +148,9 @@
             <td class="hash"></td>
             <td class="audit"></td>
             <td class="location"></td>
+          </tr>
+          <tr id="t1">
+            <td>Token 1</td>
             <td>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -164,11 +161,7 @@
                   <a class="dropdown-item" href="#" onClick="mint(0,1)">Mint</a>
                   <a class="dropdown-item" href="#" onClick="burn(1)">Burn</a>
                   <h6 class="dropdown-header">Transfer</h6>
-                  <a class="dropdown-item" href="#" onClick="send(1,0)">Send to Cody Master</a>
-                  <a class="dropdown-item" href="#" onClick="send(1,1)">Send to Cody Sub 1</a>
-                  <a class="dropdown-item" href="#" onClick="send(1,2)">Send to Cody Sub 2</a>
-                  <a class="dropdown-item" href="#" onClick="send(1,3)">Send to Patrik</a>
-                  <a class="dropdown-item" href="#" onClick="send(1,4)">Send to Lotta</a>
+                  <a class="dropdown-item" href="#" onClick="$('#sendModal').modal('show');">Send To...</a>
                   <h6 class="dropdown-header">Ability</h6>
                   <a class="dropdown-item" href="#" onClick="enable(1)">Enable</a>
                   <a class="dropdown-item" href="#" onClick="disable(1)">Disable</a>
@@ -185,9 +178,6 @@
                 </div>
               </div>
             </td>
-          </tr>
-          <tr id="t2">
-            <td>Token 2</td>
             <td class="able"></td>
             <td class="secure"></td>
             <td class="owner"></td>
@@ -195,6 +185,9 @@
             <td class="hash"></td>
             <td class="audit"></td>
             <td class="location"></td>
+          </tr>
+          <tr id="t2">
+            <td>Token 2</td>
             <td>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -205,11 +198,7 @@
                   <a class="dropdown-item" href="#" onClick="mint(0,2)">Mint</a>
                   <a class="dropdown-item" href="#" onClick="burn(2)">Burn</a>
                   <h6 class="dropdown-header">Transfer</h6>
-                  <a class="dropdown-item" href="#" onClick="send(2,0)">Send to Cody Master</a>
-                  <a class="dropdown-item" href="#" onClick="send(2,1)">Send to Cody Sub 1</a>
-                  <a class="dropdown-item" href="#" onClick="send(2,2)">Send to Cody Sub 2</a>
-                  <a class="dropdown-item" href="#" onClick="send(2,3)">Send to Patrik</a>
-                  <a class="dropdown-item" href="#" onClick="send(2,4)">Send to Lotta</a>
+                  <a class="dropdown-item" href="#" onClick="$('#sendModal').modal('show');">Send To...</a>
                   <h6 class="dropdown-header">Ability</h6>
                   <a class="dropdown-item" href="#" onClick="enable(2)">Enable</a>
                   <a class="dropdown-item" href="#" onClick="disable(2)">Disable</a>
@@ -226,6 +215,13 @@
                 </div>
               </div>
             </td>
+            <td class="able"></td>
+            <td class="secure"></td>
+            <td class="owner"></td>
+            <td class="json"><a href="#">Link</a></td>
+            <td class="hash"></td>
+            <td class="audit"></td>
+            <td class="location"></td>
           </tr>
         </table>
       </div>
@@ -241,6 +237,33 @@
     </div>
     <div class="col-2 p-5">
       <div id="c2" class="card" style="width: 100%;"></div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sendModal" tabindex="-1" role="dialog" aria-labelledby="sendModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Send to...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Please select the token you'd like to send by ID.</p>
+          <select class="form-control" id="sendWhich">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+          </select>
+          <p>Please provide the address you'd like to send the token to.</p>
+          <input type="text" class="form-control" id="sendWho" placeholder="Enter address">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onClick="modalSend();">Send!</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
     </div>
   </div>
 
