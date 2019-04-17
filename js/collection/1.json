@@ -4,6 +4,7 @@
     "@type": "Painting",
     "name": "Lucky Charms",
     "dateCreated": "+1994",
+    "boxLink": "https://fourparkmanagement.app.box.com/folder/52923695118",
     "material": "Acrylic and Lacquer",
     "creator": {
       "@type": "Person",
