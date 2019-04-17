@@ -8,20 +8,12 @@
     "assets": [
       {
         "hash": "0xd1Df4eFc6b7d47D00E21566B668a9cbbBf5D26D0",
-        "owner": {
-          "address": "0xb1690c08e213a35ed9bab7b318de14420fb57d8c",
-          "type": "account",
-          "since": "1539288088"
-        },
-        "totalOwners": 13,
-        "listing": {
-          "isListed": 1
-        },
         "details": {
           "@context": "http://schema.org",
           "@type": "Painting",
           "name": "Orange Way",
           "dateCreated": "+1994",
+          "boxLink": "https://fourparkmanagement.app.box.com/folder/52962934877",
           "material": "Acrylic and Lacquer",
           "creator": {
             "@type": "Person",
@@ -73,20 +65,12 @@
       },
       {
         "hash": "0xd1Df4eFc6b7d47D00E21566B668a9cbbBf5D2XXX",
-        "owner": {
-          "address": "0xed9bab7b1690c08e213a35b318de14420fb57d8c",
-          "type": "account",
-          "since": "1539288088"
-        },
-        "totalOwners": 13,
-        "listing": {
-          "isListed": 1
-        },
         "details": {
           "@context": "http://schema.org",
           "@type": "Painting",
           "name": "Lucky Charms",
           "dateCreated": "+1994",
+          "boxLink": "https://fourparkmanagement.app.box.com/folder/52923695118",
           "material": "Acrylic and Lacquer",
           "creator": {
             "@type": "Person",
@@ -131,20 +115,12 @@
       },
       {
         "hash": "0xd1Df4eFc6b7d47D00E21566B668a9cbbBf5D2XXX",
-        "owner": {
-          "address": "0xed9bab7b1690c08e213a35b318de14420fb57d8c",
-          "type": "account",
-          "since": "1539288088"
-        },
-        "totalOwners": 13,
-        "listing": {
-          "isListed": 1
-        },
         "details": {
           "@context": "http://schema.org",
           "@type": "Painting",
           "name": "Luciferess",
           "dateCreated": "+1994",
+          "boxLink": "https://fourparkmanagement.app.box.com/folder/52923694057",
           "material": "Acrylic and Lacquer",
           "creator": {
             "@type": "Person",

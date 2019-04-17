@@ -85,7 +85,7 @@ function getStates(which) {
     if (parseInt(r) != 0) {
       $('#c' + which).html(`        
           <div id="carouselExampleSlidesOnly" class="card-img-top carousel slide" data-ride="carousel"><div class="carousel-inner"><div class="carousel-item active"><img class="d-block w-100" src="img/${collection[which].details.citation[0].filename}" alt="First slide"></div><div class="carousel-item"><img class="d-block w-100" src="img/${collection[which].details.citation[1].filename} alt="Second slide"></div></div></div>
-          <div class="card-body"><h5 class="card-title">${collection[which].details.name}</h5><p class="card-text">${collection[which].details.material}</p></div>
+          <div class="card-body"><h5 class="card-title">${collection[which].details.name}</h5><p class="card-text">${collection[which].details.material}<br><a href="${collection[which].details.boxLink}">Box.net Link</a></p></div>
       `);
     }
   })
